@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro Poyecto Final Epica</title>
+</head>
+<body>
+    <a href="/posts">Go Back</a>
+    <h1> Update Posts</h1>
+    <form action="/posts/Update" method="post">
+        <input type="text" name="id" value="<%= posts.id %>" hidden>
+        <input type="text" name="title" placeholder="@title" value="<%= posts.title %>"><br><br>
+        <textarea name="content"  cols="30" rows="10" placeholder=" my new content" > <%= posts.content %></textarea><br>
+        <input type="text" name="image" placeholder=" Url image" value="<%= posts.image %>"><br>
+        <button> Update  Posts</button>    
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro Poyecto Final Epica</title>
+</head>
+<body>
+    <a href="/posts/create">Create new Posts</a>
+    <h1>My Posts</h1>
+
+
+    <ul>
+        <% allPosts.forEach((posts) =>{ %>
+
+            <li>
+                <p>
+                    <b> <%= posts.title %> </b>
+                    <i> <%= posts.content %></i>
+                    <img src="<%= posts.image %>">
+                    <a href="/posts/update/<%= posts.id %>"> Update</a>
+                    <a href="/posts/delete/<%= posts.id %>"> Delete</a>
+                </p>
+            </li>
+
+        <% }); %>
+    </ul>
+    
+</body>
+</html>
