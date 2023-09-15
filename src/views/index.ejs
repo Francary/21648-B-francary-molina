@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Foro Poyecto Final Epica</title>
 </head>
-<body>
-    <a href="/posts/create">Create new Posts</a>
-    <h1>My Posts</h1>
-
-
-    <ul>
-        <% allPosts.forEach((posts) =>{ %>
-
-            <li>
-                <p>
-                    <b> <%= posts.title %> </b>
-                    <i> <%= posts.content %></i>
-                    <img src="<%= posts.image %>">
-                    <a href="/posts/update/<%= posts.id %>"> Update</a>
-                    <a href="/posts/delete/<%= posts.id %>"> Delete</a>
-                </p>
-            </li>
-
-        <% }); %>
-    </ul>
+<body >
     
+    <%- include('navbar') %>
+    
+<div class="container">
+    <%- include('main') %>
+</div>
+
+    <%- include('footer') %>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 </html>
