@@ -10,7 +10,9 @@
 - Funciona en el puerto 4000 - http://localhost:4000/posts
 
 
+*** Adicionales ***
 
+- Si entra a una ruta que no esta definida carga una pagina 404 personalizada
 
 
 

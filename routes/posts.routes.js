@@ -4,15 +4,17 @@ const { getAllPosts,
         formCreateNewPosts,
         formUpdatePosts,
         updatePosts,
-        deltePosts} = require("../src/controllers/posts.controllers");
+        deltePosts,
+        error404} = require("../src/controllers/posts.controllers");
 
 const router = Router ();
 
 router.get('/', getAllPosts)
-router.get('/create', formCreateNewPosts)
 router.post('/' , createPosts)
-router.get('/update/:id', formUpdatePosts)
+router.get('/create', formCreateNewPosts)
 router.post('/update',updatePosts)
+router.get('/update/:id', formUpdatePosts)
 router.get('/delete/:id', deltePosts)
+router.get('*', error404)
 
 module.exports = router;

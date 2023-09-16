@@ -20,7 +20,8 @@ app.set("view engine", "ejs");
 // routes
 
 app.use('/posts', require('./routes/posts.routes'));
-
+app.use('/', require('./routes/posts.routes'));
+app.use('*', require('./routes/posts.routes'));
 //configuracion
 
 app.listen( puerto, () => {

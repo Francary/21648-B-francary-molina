@@ -1,11 +1,13 @@
 const {PostsModel} = require ('../models/Posts')
 
 const getAllPosts = async (req, res) => {
-
     const allPosts = await PostsModel.findAll();
     res.render('index', {allPosts});
 };
 
+const error404 = async (req , res) =>{
+    res.status(404).render('404')
+}
 const formCreateNewPosts = async (req, res) => {
     res.render('new-posts')
 };
@@ -46,5 +48,6 @@ module.exports ={
     formCreateNewPosts,
     formUpdatePosts,
     updatePosts,
-    deltePosts
+    deltePosts,
+    error404
 }
